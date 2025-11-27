@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Карты демографии и миграции</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --panel: #ffffff;
+      --ink: #0f172a;
+      --muted: #4b5563;
+      --line: #e5dfd3;
+      --accent: #0ea5e9;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    main { max-width: 1180px; margin: 0 auto; padding: 40px 22px 72px; }
+    .page-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    h1 { margin: 6px 0 8px; font-size: clamp(26px, 3vw, 36px); }
+    .lede { margin: 0; color: var(--muted); max-width: 720px; }
+    .badge { background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 12px; font-weight: 600; letter-spacing: 0.03em; white-space: nowrap; }
+    .section { margin-top: 38px; }
+    .section-title { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(14, 165, 233, 0.35); }
+    .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .card-title { font-size: 18px; margin: 2px 0 2px; }
+    .card-desc { margin: 0; color: var(--muted); font-size: 14px; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; color: var(--muted); margin: 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Обзор</p>
+        <h1>Карты демографии и миграции</h1>
+        <p class="lede">Все ссылки открываются в новой вкладке. Подписи и названия приведены на русском языке.</p>
+      </div>
+      <div class="badge">11 карт</div>
+    </header>
+
+    <section class="section">
+      <div class="section-title">Миграционные потоки</div>
+      <div class="grid">
+        <a class="card" href="All_migration_КАТО4_UNDP.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Потоки</p>
+          <div class="card-title">Все миграционные потоки (КАТО4)</div>
+          <p class="card-desc">Совмещенные притоки и оттоки по территориям КАТО4.</p>
+        </a>
+        <a class="card" href="Inner_migration_КАТО4_UNDP.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Потоки</p>
+          <div class="card-title">Внутренняя миграция (КАТО4)</div>
+          <p class="card-desc">Передвижения внутри страны по единицам КАТО4.</p>
+        </a>
+        <a class="card" href="Outer_migration_КАТО4_UNDP.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Потоки</p>
+          <div class="card-title">Внешняя миграция (КАТО4)</div>
+          <p class="card-desc">Перемещения через границу: приток и отток.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Миграционное сальдо</div>
+      <div class="grid">
+        <a class="card" href="Все_сальдо_по_регионам_interactive.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Сальдо</p>
+          <div class="card-title">Общее миграционное сальдо</div>
+          <p class="card-desc">Сальдо по регионам: внутреннее и внешнее движение вместе.</p>
+        </a>
+        <a class="card" href="Внутреннее_сальдо_по_регионам_interactive.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Сальдо</p>
+          <div class="card-title">Сальдо внутренней миграции</div>
+          <p class="card-desc">Чистый прирост/убыль за счет перемещений внутри страны.</p>
+        </a>
+        <a class="card" href="Внешнее_сальдо_по_регионам_interactive.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Сальдо</p>
+          <div class="card-title">Сальдо внешней миграции</div>
+          <p class="card-desc">Чистый прирост/убыль за счет внешних перемещений.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Население и демография</div>
+      <div class="grid">
+        <a class="card" href="Население_по_регионам_interactive.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Население</p>
+          <div class="card-title">Население по регионам</div>
+          <p class="card-desc">Базовое распределение численности по регионам.</p>
+        </a>
+        <a class="card" href="Общий коэфф рождаемости_КАТО4.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Рождаемость</p>
+          <div class="card-title">Общий коэффициент рождаемости (КАТО4)</div>
+          <p class="card-desc">Показатель рождаемости на уровне КАТО4.</p>
+        </a>
+        <a class="card" href="CDR_КАТО4_UNDP_interactive.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Смертность</p>
+          <div class="card-title">Общий коэффициент смертности (КАТО4)</div>
+          <p class="card-desc">Смертность по административным единицам КАТО4.</p>
+        </a>
+        <a class="card" href="СКР_по_регионам_interactive.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Рождаемость</p>
+          <div class="card-title">Суммарный коэффициент рождаемости</div>
+          <p class="card-desc">Рождаемость с учетом возрастной структуры населения.</p>
+        </a>
+        <a class="card" href="ОПЖ_по_регионам_interactive.html" target="_blank" rel="noopener">
+          <p class="eyebrow">Долголетие</p>
+          <div class="card-title">Ожидаемая продолжительность жизни</div>
+          <p class="card-desc">ОПЖ при рождении по регионам.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
